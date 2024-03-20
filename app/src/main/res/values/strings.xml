@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Guess2</string>
     <string name="title">Rock, Paper, Scissors</string>
+    <string name="result">Result</string>
 </resources>

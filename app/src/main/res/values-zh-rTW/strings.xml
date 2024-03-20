@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">猜拳</string>
     <string name="title">剪刀石頭布</string>
+    <string name="result">顯示結果</string>
 </resources>

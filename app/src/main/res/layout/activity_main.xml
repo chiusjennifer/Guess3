@@ -12,23 +12,65 @@
         android:layout_height="wrap_content"
         android:text="@string/title"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn"
+    <ImageButton
+        android:id="@+id/imageS"
+        android:onClick="Guess"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="456dp"
-        android:text="A"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintEnd_toStartOf="@+id/imageR"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txv"
+        app:srcCompat="@drawable/scissors"
+        app:layout_constraintHorizontal_chainStyle="spread"/>
+
+    <ImageButton
+        android:id="@+id/imageR"
+        android:onClick="Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txv"
+        app:srcCompat="@drawable/rock"
+        tools:layout_editor_absoluteX="155dp"
+        app:layout_constraintStart_toEndOf="@+id/imageS"
+        app:layout_constraintEnd_toStartOf="@+id/imageP"/>
+
+    <ImageButton
+        android:id="@+id/imageP"
+        android:onClick="Guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageR"
+        app:layout_constraintTop_toBottomOf="@+id/txv"
+        app:srcCompat="@drawable/paper"
+        />
+
+    <ImageView
+        android:id="@+id/imagePhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageR"
+        app:layout_constraintVertical_bias="0.039"
+        app:srcCompat="@drawable/title" />
+
+    <TextView
+        android:id="@+id/tvxResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePhone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
